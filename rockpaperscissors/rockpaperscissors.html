@@ -45,21 +45,20 @@
         
         function playGame(userPlay, computerPlay) {
             if (userPlay == "rock" && computerPlay == "paper") {
-                return "Paper beats Rock, You've got dirty socks.";
+                return "You're a loser. " +computerPlay+ " beats " +userPlay+ ".";
             } else if (userPlay == "rock" && computerPlay == "scissors") {
-                return "Victory is yours, Rock smashed Scissors.";
+                return "You win! " +userPlay+ " beats " +computerPlay+ ".";
             } else if (userPlay == "paper" && computerPlay == "rock") {
-                return "You're winning a lot, because Paper beats Rock.";
+                return "You win! " +userPlay+ " beats " +computerPlay+ ".";
             } else if (userPlay == "paper" && computerPlay == "scissors") {
-                return "Losers are danger, because Scissors always beats Paper.";
+                return "You're a loser. " +computerPlay+ " beats " +userPlay+ ".";
             } else if (userPlay == "scissors" && computerPlay == "rock") {
-                return "You winning is a crock. Scissors will never beat Rock.";
+                return "You're a loser. " +computerPlay+ " beats " +userPlay+ ".";
             } else if (userPlay == "scissors" && computerPlay == "paper") {
-                return "Victory is clear when Scissors come to fight and Paper is near."
-            } else (userPlay === computerPlay); {
-                return "A TIE? THERE IS NO SUCH THING! BATTLE AGAIN!"
+                return "You win! " +userPlay+ " beats " +computerPlay+ ".";
+            } else (userPlay == computerPlay) 
+                return "A TIE? THERE IS NO SUCH THING! BATTLE AGAIN!";
             }
-        }
         
             // the playGame function takes in two arguements, the previously created userPlay and computerPlay functions.
             // I then used an else/if statement to outline any of the outcomes possible when playing the game. If userPlay
