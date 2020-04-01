@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function computerPlay() {
+			let max = 3;
+			let play = Math.floor(Math.random()*max);
+			if (play == 0) {
+				return "rock";
+			} else if (play == 1) {
+				return "paper";
+			} else {
+				return "scissors";
+			}
+        }
+        
+            // computerPlay first sets the variable max to 3.
+            // computerPlay then sets the variable play to Math.floor
+            // Math.floor is a function calling Math.random() multiplied by the variable max
+            // Math.random is going to set the variable to any number between 0-1, and multiplying
+            // it by the variable max = 3, it will set up the varible to choose an number
+            // between 0-2.999999, while Math.floor makes sure that it chooses the largest integer less
+            // or equal to the number that the Math.random function specifies. 
+            // we then go to the if statement, which states if the variable play is equal to (==) zero,
+            // it will return the string "Rock"
+            // the else if states that if the variable play is equal to 1, it will return the string
+            // "paper" and finally, if it returns anyting other than those two numbers, the variable 
+            // will return the string "Scissors" which works, because there is only one other possibility.
+
+        function userPlay() {
+            let move = window.prompt("Rock, Paper or Scissors?");
+            let universal = move.toLowerCase();
+            return universal;
+        }
+        
+            // userPlay sets a variable called move to a window prompt that asks the user what move they 
+            // would like to make. It outlines three different options. We then set a variable universal to 
+            // move variable and make the answer in all lower case, no matter what the user types in. The function
+            // then returns what the user has entered into the window prompt input in all lower case letters.
+        
+        function playGame(userPlay, computerPlay) {
+            if (userPlay == "rock" && computerPlay == "paper") {
+                return "Paper beats Rock, You've got dirty socks.";
+            } else if (userPlay == "rock" && computerPlay == "scissors") {
+                return "Victory is yours, Rock smashed Scissors.";
+            } else if (userPlay == "paper" && computerPlay == "rock") {
+                return "You're winning a lot, because Paper beats Rock.";
+            } else if (userPlay == "paper" && computerPlay == "scissors") {
+                return "Losers are danger, because Scissors always beats Paper.";
+            } else if (userPlay == "scissors" && computerPlay == "rock") {
+                return "You winning is a crock. Scissors will never beat Rock.";
+            } else if (userPlay == "scissors" && computerPlay == "paper") {
+                return "Victory is clear when Scissors come to fight and Paper is near."
+            } else (userPlay === computerPlay); {
+                return "A TIE? THERE IS NO SUCH THING! BATTLE AGAIN!"
+            }
+        }
+        
+        console.log(playGame(userPlay(), computerPlay()));
+        
+        
+    </script>
+</body>
+</html>
