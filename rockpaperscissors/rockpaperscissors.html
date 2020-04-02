@@ -19,18 +19,20 @@
 			}
         }
         
-            // computerPlay first sets the variable max to 3.
-            // computerPlay then sets the variable play to Math.floor
-            // Math.floor is a function calling Math.random() multiplied by the variable max
-            // Math.random is going to set the variable to any number between 0-1, and multiplying
-            // it by the variable max = 3, it will set up the varible to choose an number
-            // between 0-2.999999, while Math.floor makes sure that it chooses the largest integer less
-            // or equal to the number that the Math.random function specifies. 
-            // we then go to the if statement, which states if the variable play is equal to (==) zero,
-            // it will return the string "Rock"
-            // the else if states that if the variable play is equal to 1, it will return the string
-            // "paper" and finally, if it returns anyting other than those two numbers, the variable 
-            // will return the string "Scissors" which works, because there is only one other possibility.
+            // computerPlay first sets the variable 'max' to 3.
+            // computerPlay then sets the variable 'play' to Math.floor
+            // Math.floor is a function calling Math.random() multiplied by the 
+            // variable max. Math.random is going to give me a number between 0-1.
+            // Multiplying it by the variable max = 3, it will set up the varible 
+            // to choose a number between 0-2.999999, while Math.floor makes sure 
+            // that it chooses the largest integer less or equal to the number 
+            // that the Math.random function specifies. We then go to the if 
+            // statement, which states if the variable play is equal to (==) zero,
+            // it will return the string "Rock." The else if states that if the
+            // variable play is equal to 1, it will return the string "paper" and
+            // finally, if it returns anyting other than those two numbers, the
+            // variable will return the string "Scissors" which works, because
+            // there is only one other possibility.
 
         function userPlay() {
             let move = window.prompt("Rock, Paper or Scissors?");
@@ -38,36 +40,46 @@
             return universal;
         }
         
-            // userPlay sets a variable called move to a window prompt that asks the user what move they 
-            // would like to make. It outlines three different options. We then set a variable universal to 
-            // move variable and make the answer in all lower case, no matter what the user types in. The function
-            // then returns what the user has entered into the window prompt input in all lower case letters.
+            // userPlay sets a variable called 'move' to a window prompt that asks
+            // the user what move they would like to make. It outlines three 
+            // different options. I then set a variable 'universal' to equal the move 
+            // variable and make the answer in all lower case, no matter what the 
+            // user types in. The function then returns what the user has entered
+            // into the window prompt input in all lower case letters.
         
         function playGame(userPlay, computerPlay) {
             if (userPlay == "rock" && computerPlay == "paper") {
-                return "You're a loser. " +computerPlay+ " beats " +userPlay+ ".";
+                return "you're a loser. " +computerPlay+ " covers " +userPlay+ ".";
             } else if (userPlay == "rock" && computerPlay == "scissors") {
-                return "You win! " +userPlay+ " beats " +computerPlay+ ".";
+                return "you win! " +userPlay+ " smashes " +computerPlay+ ".";
             } else if (userPlay == "paper" && computerPlay == "rock") {
-                return "You win! " +userPlay+ " beats " +computerPlay+ ".";
+                return "you win! " +userPlay+ " covers " +computerPlay+ ".";
             } else if (userPlay == "paper" && computerPlay == "scissors") {
-                return "You're a loser. " +computerPlay+ " beats " +userPlay+ ".";
+                return "you're a loser. " +computerPlay+ " cuts " +userPlay+ ".";
             } else if (userPlay == "scissors" && computerPlay == "rock") {
-                return "You're a loser. " +computerPlay+ " beats " +userPlay+ ".";
+                return "you're a loser. " +computerPlay+ " smashes " +userPlay+ ".";
             } else if (userPlay == "scissors" && computerPlay == "paper") {
-                return "You win! " +userPlay+ " beats " +computerPlay+ ".";
+                return "you win! " +userPlay+ " cuts " +computerPlay+ ".";
             } else (userPlay == computerPlay) 
                 return "A TIE? THERE IS NO SUCH THING! BATTLE AGAIN!";
             }
         
-            // the playGame function takes in two arguements, the previously created userPlay and computerPlay functions.
-            // I then used an else/if statement to outline any of the outcomes possible when playing the game. If userPlay
-            // is equal (==) to a certain string AND (&&) computerPlay is equal to a certain string, meaning both statements 
-            // evaluate as true, it will return the appropriate response. 
+            // the playGame function takes in two arguements, the previously 
+            // created userPlay and computerPlay functions. I then used an else/if
+            // statement to outline any of the outcomes possible when playing the game.
+            // If userPlay is equal (==) to a certain string AND (&&) computerPlay is
+            // equal to a certain string, meaning both statements evaluate as true, 
+            // it will return the appropriate response. Included in the return is 
+            // the use of the passed in variables in order to tailor the response
+            // on the console to whatever the computer and the user have chosen.
 
-        console.log(playGame(userPlay(), computerPlay()));
         
-            // Lastly, I had to console log the playGame function so the game would run on pageload.
+    result = playGame(userPlay(), computerPlay());
+    console.log(result);
+    
+        
+            // Lastly, I had to run the playGame function so the game would 
+            // run on pageload.
         
     </script>
 </body>
